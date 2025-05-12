@@ -1,0 +1,123 @@
+<!-- @pageTitle UI-DM-MA-00-002_통합검색결과 -->
+<!-- @pageCreated 2025-05-12 -->
+<!-- @pageUpdated 2025-05-12 -->
+<!-- @pageNote 통합검색 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <div class="inner">
+        <!-- breadcrumb -->
+        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="home"><a href="#" class="txt">홈</a></li>
+                <li><a href="#" class="txt">데이터</a></li>
+            </ol>
+        </nav>
+        <!-- breadcrumb -->
+    </div>
+
+    <div id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">데이터</h2>
+        </div>
+        <div class="search-top-box">
+            <div class="sch-form-wrap">
+                <div class="sch-input">
+                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
+                    <button type="button" class="krds-btn medium icon ico-search">
+                        <span class="sr-only">검색</span>
+                        <i class="svg-icon ico-sch"></i>
+                    </button>
+                </div>
+                <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
+            </div>
+            <div class="sch-filter-box">
+
+            </div>
+        </div>
+        <!-- //search-top-box -->
+
+        <div class="page-content">
+            {{> aside}}
+
+            <div class="page-content-body">
+                <div class="page-content-body-content">
+                    <div class="search-list-top">
+                        <div class="search-list-result">
+                            검색결과 <b class="total">249</b>건
+                        </div>
+                        <div class="search-list-sort">
+                            <div class="sort-type-group">
+                                <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
+                                <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-list-container">
+
+                        <div class="table table-list">
+                            <table>
+                                <thead>
+                                    <th scope="col">순번</th>
+                                    <th scope="col">데이터명</th>
+                                    <th scope="col">관리기관</th>
+                                    <th scope="col">카테고리</th>
+                                    <th scope="col">자료유형</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">수정일</th>
+                                    <th scope="col">보안등급</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td>데이터명</td>
+                                        <td>관리기관</td>
+                                        <td>카테고리</td>
+                                        <td>자료유형</td>
+                                        <td class="date">등록일</td>
+                                        <td class="date">수정일</td>
+                                        <td>보안등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td>데이터명</td>
+                                        <td>관리기관</td>
+                                        <td>카테고리</td>
+                                        <td>자료유형</td>
+                                        <td class="date">등록일</td>
+                                        <td class="date">수정일</td>
+                                        <td>보안등급</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <!-- pagination -->
+                {{> pagination}}
+                <!-- //pagination -->
+            </div>
+        </div>
+
+
+    </div>
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

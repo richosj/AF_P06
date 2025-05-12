@@ -1,0 +1,48 @@
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
+@use 'sass:math';
+
+$table-header-bg-color: #f8f9fa;
+$table-header-border-color: #ddd;
+$table-tbody-border-color: #ddd;
+
+$table-tbody-bg-danger: rgba(#bd2c0f,0.1);
+$table-tbody-bg-warning: rgba(#8a5c00,0.1);
+$table-tbody-bg-success: rgba(#267337,0.1);
+
+.table{
+    border-top: 1px solid #000;
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th,
+    td{
+        padding: 1rem 0;
+    }
+    thead{
+        background-color: $table-header-bg-color;
+        tr{
+            border-bottom: 1px solid $table-header-border-color;
+        }
+    }
+    tbody{
+        tr{
+            border-bottom: 1px solid $table-tbody-border-color;
+            &.danger{
+                background-color: $table-tbody-bg-danger;
+            }
+            &.warning{
+                background-color: $table-tbody-bg-warning;
+            }
+            &.success{
+                background-color: $table-tbody-bg-success;
+            }
+        }
+    }
+    &.table-list{
+        text-align: center;
+    }
+}
