@@ -1,0 +1,13 @@
+
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+.icon-lab{
+    background: url(#{$image-path}/icon-lab@12x16.png) no-repeat 50% 50%;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.6rem;
+}

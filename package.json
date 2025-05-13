@@ -1,11 +1,13 @@
 {
-  "name": "min-gung-kyung",
+  "name": "AF_P06",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "dev": "vite --mode localdev",
     "build:local": "vite build --mode localbuild",
-    "preview": "vite preview"
+    "build:ghpages": "vite build --mode ghpages",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",

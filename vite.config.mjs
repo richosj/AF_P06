@@ -60,7 +60,8 @@ export default defineConfig(({ mode }) => {
     base: basePath,
     publicDir: '../public',
     build: {
-      outDir: '../build',
+      //outDir: '../build',
+      outDir: isGhPages ? '../dist' : isLocalBuild ? '../build' : '../dist',
       emptyOutDir: true,
       rollupOptions: {
         input: Object.fromEntries(
@@ -69,13 +70,13 @@ export default defineConfig(({ mode }) => {
             return [name, path.resolve(__dirname, file)]
           })
         ),
-        output: {
-          entryFileNames: 'assets/js/[name].js',
-          assetFileNames: ({ name }) => {
-            if (name && name.endsWith('.css')) return 'assets/css/styles.css';
-            return 'assets/[name]';
-          },
-        }
+        // output: {
+        //   entryFileNames: 'assets/js/[name].js',
+        //   assetFileNames: ({ name }) => {
+        //     if (name && name.endsWith('.css')) return 'assets/css/styles.css';
+        //     return 'assets/[name]';
+        //   },
+        // }
       },
       minify: mode === 'localbuild' ? false : 'esbuild'
     },

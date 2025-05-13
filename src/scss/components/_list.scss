@@ -1,0 +1,89 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+
+.card{
+    border-radius: 1.2rem;
+    border: 1px solid #c6c6c6;
+    padding: 2.8rem;
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+    &-item{
+
+    }
+    &-body{
+        
+    }
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.4rem;
+    }
+    &-content{
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #c6c6c6;
+    }
+    &-title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+        width: 100%;
+        font-weight: 700;
+        font-size: 1.9rem;
+    }
+    &-desc{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.7rem;
+        color: #666;
+        line-height: 1;
+        padding-top: 1.7rem;
+    }
+    &-meta{
+        display: inline-flex;
+        align-items: center;
+        gap:0 .8rem;
+        font-size: 1.5rem;
+        color: #555;        
+    }
+    &-footer{
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+    }
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+        margin-top: 1rem;
+        .info-item{
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            font-size: 1.5rem;
+            color: #555;
+            dt{
+                font-weight: 400;
+            }
+            dd{}
+        }
+    }
+    &-action{
+        margin-top: 2rem;
+        .btn{
+            width: 100%;
+        }
+    }
+}

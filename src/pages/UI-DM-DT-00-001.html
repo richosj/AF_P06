@@ -25,7 +25,7 @@
         <!-- breadcrumb -->
     </div>
 
-    <div id="contents">
+    <main id="contents">
         <div class="page-header">
             <h2 class="page-header-title">데이터</h2>
         </div>
@@ -40,9 +40,7 @@
                 </div>
                 <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
             </div>
-            <div class="sch-filter-box">
-
-            </div>
+            <div class="sch-filter-box"></div>
         </div>
         <!-- //search-top-box -->
 
@@ -57,14 +55,15 @@
                         </div>
                         <div class="search-list-sort">
                             <div class="sort-type-group">
-                                <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
-                                <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
+                                <button type="button" class="sort-type-group-item" aria-pressed="true"
+                                    title="갤러리형 보기">갤러리형</button>
+                                <button type="button" class="sort-type-group-item" title="목록형 보기"
+                                    aria-pressed="false">목록형</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="search-list-container">
-
                         <div class="table table-list">
                             <table>
                                 <thead>
@@ -98,22 +97,97 @@
                                         <td class="date">수정일</td>
                                         <td>보안등급</td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
-                        
+                        <ul class="card-list">
+                            <li class="card-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-header">
+                                            <div class="card-tag">
+                                                <span class="krds-badge bg-light-primary">해양환경</span>
+                                            </div>
+                                            <div class="card-status">
+                                                <span class="krds-badge bg-light-success">일반</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                            <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                            <div class="card-info">
+                                                <dl class="info-item">
+                                                    <dt>등록일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                                <dl class="info-item">
+                                                    <dt>수정일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                                <dl class="info-item">
+                                                    <dt>조회</dt>
+                                                    <dd>128</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="card-action">
+                                            <button type="button" class="krds-btn btn small">다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-header">
+                                            <div class="card-tag">
+                                                <span class="krds-badge bg-light-primary">해양환경</span>
+                                            </div>
+                                            <div class="card-status">
+                                                <span class="krds-badge bg-light-success">일반</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                            <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                            <div class="card-info">
+                                                <dl class="info-item">
+                                                    <dt>등록일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                                <dl class="info-item">
+                                                    <dt>수정일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                                <dl class="info-item">
+                                                    <dt>조회</dt>
+                                                    <dd>128</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="card-action">
+                                            <button type="button" class="krds-btn btn small">다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- pagination -->
+                        {{> pagination}}
+                        <!-- //pagination -->
                     </div>
-
                 </div>
-                <!-- pagination -->
-                {{> pagination}}
-                <!-- //pagination -->
+
             </div>
         </div>
-
-
-    </div>
+    </main>
     <!-- footer -->
     {{> footer}}
     <!-- //footer -->
