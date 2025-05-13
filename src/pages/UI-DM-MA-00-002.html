@@ -14,109 +14,142 @@
     {{> header}}
     <!-- //header -->
 
-    <div class="inner">
-        <!-- breadcrumb -->
-        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="home"><a href="#" class="txt">홈</a></li>
-                <li><a href="#" class="txt">데이터</a></li>
-            </ol>
-        </nav>
-        <!-- breadcrumb -->
-    </div>
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
 
-    <div id="contents">
+    <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">데이터</h2>
+            <h2 class="page-header-title">통합검색결과</h2>
         </div>
-        <div class="search-top-box">
-            <div class="sch-form-wrap">
-                <div class="sch-input">
-                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
-                    <button type="button" class="krds-btn medium icon ico-search">
-                        <span class="sr-only">검색</span>
-                        <i class="svg-icon ico-sch"></i>
-                    </button>
-                </div>
-                <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
-            </div>
-            <div class="sch-filter-box">
-
-            </div>
-        </div>
+        <!-- //page-header -->
+        
+        {{> search-top-box }}
         <!-- //search-top-box -->
 
         <div class="page-content">
-            {{> aside}}
-
+            <!-- {{> aside}} -->
             <div class="page-content-body">
-                <div class="page-content-body-content">
-                    <div class="search-list-top">
-                        <div class="search-list-result">
-                            검색결과 <b class="total">249</b>건
-                        </div>
-                        <div class="search-list-sort">
-                            <div class="sort-type-group">
-                                <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
-                                <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
-                            </div>
-                        </div>
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
                     </div>
-
-                    <div class="search-list-container">
-
-                        <div class="table table-list">
-                            <table>
-                                <thead>
-                                    <th scope="col">순번</th>
-                                    <th scope="col">데이터명</th>
-                                    <th scope="col">관리기관</th>
-                                    <th scope="col">카테고리</th>
-                                    <th scope="col">자료유형</th>
-                                    <th scope="col">등록일</th>
-                                    <th scope="col">수정일</th>
-                                    <th scope="col">보안등급</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="num">1</td>
-                                        <td>데이터명</td>
-                                        <td>관리기관</td>
-                                        <td>카테고리</td>
-                                        <td>자료유형</td>
-                                        <td class="date">등록일</td>
-                                        <td class="date">수정일</td>
-                                        <td>보안등급</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num">1</td>
-                                        <td>데이터명</td>
-                                        <td>관리기관</td>
-                                        <td>카테고리</td>
-                                        <td>자료유형</td>
-                                        <td class="date">등록일</td>
-                                        <td class="date">수정일</td>
-                                        <td>보안등급</td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                    </div>
-
                 </div>
-                <!-- pagination -->
-                {{> pagination}}
-                <!-- //pagination -->
+                <!-- //search-list-top -->
+
+                <div class="tab line full">
+                    <ul role="tablist">
+                        <li role="tab" aria-selected="true" class="active"><button type="button" class="btn-tab">전체(192)</button></li>
+                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">공간데이터 (100)</button></li>
+                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">파일데이터 (60)</button></li>
+                        <li role="tab" aria-selected="false"><button type="button" class="btn-tab">Open API (32)</button></li>
+                    </ul>
+                </div>
+                <!-- //tab -->
+
+                <div class="search-list-container unif">
+                    <section>
+                        <div class="hgroup">
+                            <h2>공간데이터</h2>
+                            <a href="#" title="바로가기"><i class="svg-icon ico-more"></i></a>
+                        </div>
+
+                        <div class="search-list-body">
+                            <ul class="card-list">
+                                <li class="card-item">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-header">
+                                                <div class="card-tag">
+                                                    <span class="krds-badge bg-light-primary">해양환경</span>
+                                                </div>
+                                                <div class="card-status">
+                                                    <span class="krds-badge bg-light-success">일반</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-content">
+                                                <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                                <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                                <div class="card-info">
+                                                    <dl class="info-item">
+                                                        <dt>등록일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>수정일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>조회</dt>
+                                                        <dd>128</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <div class="card-action">
+                                                <button type="button" class="krds-btn btn small">다운로드</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-item">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-header">
+                                                <div class="card-tag">
+                                                    <span class="krds-badge bg-light-primary">해양환경</span>
+                                                </div>
+                                                <div class="card-status">
+                                                    <span class="krds-badge bg-light-success">일반</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-content">
+                                                <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                                <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                                <div class="card-info">
+                                                    <dl class="info-item">
+                                                        <dt>등록일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>수정일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>조회</dt>
+                                                        <dd>128</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <div class="card-action">
+                                                <button type="button" class="krds-btn btn small">다운로드</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <!-- //search-list-container -->
             </div>
+            <!-- //page-content-body -->
         </div>
-
-
-    </div>
+        <!-- //page-content -->
+    </main>
     <!-- footer -->
     {{> footer}}
     <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
     <script type="module" src="/js/main.js"></script>
 </body>
 

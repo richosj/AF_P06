@@ -46,3 +46,31 @@ $table-tbody-bg-success: rgba(#267337,0.1);
         text-align: center;
     }
 }
+
+
+.meta-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-top: 1px solid #000;
+    tr{
+        border-bottom: 1px solid #c6c6c6;
+    }
+    th,
+    td{
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        //min-height: 6rem;
+    }
+    th{
+        background-color: #fafafa;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        color: #1d1d1d;
+        font-weight: 700;
+        text-align: left;
+    }
+    td{
+        //padding-left: 2rem;
+    }
+}

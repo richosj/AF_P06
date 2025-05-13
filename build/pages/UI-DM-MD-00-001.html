@@ -1,7 +1,7 @@
-<!-- @pageTitle 메인 -->
-<!-- @pageCreated 2025-05-09 -->
-<!-- @pageUpdated 2025-05-12 -->
-<!-- @pageNote 메인 구성 변경 -->
+<!-- @pageTitle UI-DM-MD-00-001_메타데이터 목록 -->
+<!-- @pageCreated 2025-05-13 -->
+<!-- @pageUpdated 2025-05-13 -->
+<!-- @pageNote 서브화면 스케치 작업 -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -176,140 +176,259 @@
         </div>
         <!-- //헤더 컨텐츠 영역  -->
     </header>    <!-- //header -->
+    
+    <!-- breadcrumb -->
+    <nav class="inner krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="home"><a href="#" class="txt">홈</a></li>
+            <li><a href="#" class="txt">데이터</a></li>
+        </ol>
+    </nav>    <!-- breadcrumb -->
 
-    <main id="main">
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">메타데이터</h2>
+        </div>
+        <!-- //page-header -->
 
-        <div class="main-top-sch">
-            <div class="inner">
-            <div class="sch-tit">통합검색</div>
-            <div class="sch-form-wrap vert">
+        <div class="search-top-box">
+            <div class="sch-form-wrap">
                 <div class="sch-input">
-                    <input type="text" class="krds-input xlarge" placeholder="검색어를 입력해주세요." value="" title="검색어 입력">
-                    <button type="button" class="krds-btn xlarge icon ico-search" aria-label="검색">
+                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
+                    <button type="button" class="krds-btn medium icon ico-search">
                         <span class="sr-only">검색</span>
                         <i class="svg-icon ico-sch"></i>
                     </button>
                 </div>
-                <div class="sch-details">
-                    <button class="btn-more-filter" title="검색 상세 조건 열림">
-                        <i class="svg-icon ico-sch-plus"></i>
-                        검색필터
-                    </button>
-                </div>
-                <dl class="sch-tag">
-                    <dt>추천 검색어</dt>
-                    <dd class="krds-tag-wrap large" aria-live="polite">
-                        <a href="#" class="krds-btn-tag link">안전보건교육</a>
-                        <a href="#" class="krds-btn-tag link">퇴직금계산기</a>
-                        <a href="#" class="krds-btn-tag link">실업인정신청</a>
-                        <a href="#" class="krds-btn-tag link">중간정산</a>
-                        <a href="#" class="krds-btn-tag link">국민 내일 배움</a>
-                    </dd>
-                </dl>
+                <!-- <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button> -->
             </div>
+        
+            <div class="">
+        
             </div>
-        </div>
-        <!-- //main-top-sch -->
+        
+            <div class="sch-filter-box"></div>
+        </div>        <!-- //search-top-box -->
 
-        <div class="main-sect">
-            <div class="inner">
-                <div class="main-tit-wrap">
-                    <h2 class="tit">데이터 통계</h2>
-                </div>
-
-                <div class="main-grid-wrap">
-                    <div class="main-data-status">
-                        <div class="main-data-status-title">데이터 현황</div>
-                        <div class="main-data-status-content">
-                            <div class="chart">차트공간 width:270px</div>
-                            <div class="main-data-status-list">
-                                <div class="main-data-status-item item-1">
-                                    <div class="icon"><img src="../assets/images/main-data-icon-1.png" alt=""></div>
-                                    <div class="main-data-status-item-value">100</div>
-                                    <div class="main-data-status-item-title">데이터 현황</div>
-                                </div>
-                                <div class="main-data-status-item item-2">
-                                    <div class="icon"><img src="../assets/images/main-data-icon-2.png" alt=""></div>
-                                    <div class="main-data-status-item-value">100</div>
-                                    <div class="main-data-status-item-title">데이터 현황</div>
-                                </div>
-                                <div class="main-data-status-item item-3">
-                                    <div class="icon"><img src="../assets/images/main-data-icon-3.png" alt=""></div>
-                                    <div class="main-data-status-item-value">100</div>
-                                    <div class="main-data-status-item-title">데이터 현황</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //main-data-status -->
-                    <div class="main-data-banner">
-                        <div class="swiper">
-                            <ul class="swiper-wrapper">
-                                <li class="swiper-slide"><a href="#"><img src="https://dummyimage.com/385x340" alt=""></a></li>
-                                <li class="swiper-slide"><a href="#"><img src="https://dummyimage.com/385x340" alt=""></a></li>
+        <div class="page-content">
+            <aside class="page-content-aside">
+                <div class="aside">
+                    <dl class="filter-dl">
+                        <dt>검색 필터</dt>
+                        <dd>
+                            <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
+                                <li class="li accordion-item active">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion active" aria-expanded="true"
+                                            id="accordionHeader-id-0xy1ka4t"
+                                            aria-controls="accordionCollapse-id-0xy1ka4t">
+                                            <div class="tit">검색대상<span class="krds-badge bg-primary number">4</span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-0xy1ka4t"
+                                        aria-labelledby="accordionHeader-id-0xy1ka4t">
+                                        <div class="accordion-body">
+                                            <div class="krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-target_chk_1a">
+                                                    <label for="filter-target_chk_1a">메뉴 (2)</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-target_chk_2a" checked="">
+                                                    <label for="filter-target_chk_2a">뉴스 (2,301)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-1dn6gd5r"
+                                            aria-controls="accordionCollapse-id-1dn6gd5r">
+                                            <div class="tit">검색 기간<span class="krds-badge bg-primary number">1 </span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-1dn6gd5r"
+                                        aria-labelledby="accordionHeader-id-1dn6gd5r">
+                                        <div class="accordion-body">
+                                            
+                                            <div class="form-group">
+                                                <div class="form-conts calendar-conts">
+                                                    <ul class="input-group range">
+                                                        <li>
+                                                            <label for="datepicker1a" class="form-tit">시작날짜</label>
+                                                            <input type="number" class="krds-input datepicker medium"
+                                                                id="datepicker1a" placeholder="" value="20231002">
+                                                        </li>
+                                                        <li class="mark sm">-</li>
+                                                        <li>
+                                                            <label for="datepicker2a" class="form-tit">종료날짜</label>
+                                                            <input type="number" class="krds-input datepicker medium"
+                                                                id="datepicker2a" placeholder="" value="20231202">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-2xi413ug"
+                                            aria-controls="accordionCollapse-id-2xi413ug">
+                                            <div class="tit">자료 유형<span class="krds-badge bg-primary number">1</span>
+                                            </div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-2xi413ug"
+                                        aria-labelledby="accordionHeader-id-2xi413ug">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-data_chk_1a">
+                                                    <label for="filter-data_chk_1a">PDF (234)</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-data_chk_2a">
+                                                    <label for="filter-data_chk_2a">HWP (220)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-3ty2lpxx"
+                                            aria-controls="accordionCollapse-id-3ty2lpxx">
+                                            <div class="tit">자료 이용 장소</div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-3ty2lpxx"
+                                        aria-labelledby="accordionHeader-id-3ty2lpxx">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-place_chk_1a">
+                                                    <label for="filter-place_chk_1a">장소1</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-place_chk_2a">
+                                                    <label for="filter-place_chk_2a">장소2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="li accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button type="button" class="btn-accordion" aria-expanded="false"
+                                            id="accordionHeader-id-4h755vbe"
+                                            aria-controls="accordionCollapse-id-4h755vbe">
+                                            <div class="tit">자료 언어</div>
+                                        </button>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" role="region"
+                                        id="accordionCollapse-id-4h755vbe"
+                                        aria-labelledby="accordionHeader-id-4h755vbe">
+                                        <div class="accordion-body">
+                                            <div class="row krds-check-area chk-column">
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-lang_chk_1a">
+                                                    <label for="filter-lang_chk_1a">영어</label>
+                                                </div>
+                                                <div class="krds-form-check">
+                                                    <input type="checkbox" id="filter-lang_chk_2a">
+                                                    <label for="filter-lang_chk_2a">일본어</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                        <div class="swiper-indicator">
-                            <div class="swiper-indicator-container">
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-controller">
-                                    <button type="button" class="swiper-button-play">
-                                    <span class="sr-only">슬라이드 재생</span>
-                                    </button>
-                                    <button type="button" class="swiper-button-stop">
-                                    <span class="sr-only">슬라이드 멈춤</span>
-                                    </button>
+                        </dd>
+                    </dl>
+                    <div class="filter-btn">
+                        <button type="button" class="krds-btn medium tertiary">초기화</button>
+                        <button type="button" class="krds-btn medium primary">적용하기</button>
+                    </div>
+                </div>
+            </aside>            <div class="page-content-body">
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                </div>
+                <!-- //search-list-top -->
+
+                <div class="search-list-container">
+                    <ul class="card-list w-full">
+                        <li class="card-item">
+                            <div class="card">
+                                <div class="card-thumbnail">
+                                    <div class="card-thumbnail-icon"><i><img src="../assets/images/system/icon-1.png" alt=""></i></div>
+                                    <div class="card-thumbnail-caption">해양경계</div>
                                 </div>
-                                <div class="swiper-navigation">
-                                    <button type="button" class="swiper-button-prev">
-                                    <span class="sr-only">이전</span>
-                                    </button>
-                                    <button type="button" class="swiper-button-next">
-                                    <span class="sr-only">다음</span>
-                                    </button>
-                                    <a href="#" class="swiper-button-more">
-                                    <span class="sr-only">더 보기</span>
-                                    </a>
+                                <div class="card-body">
+                                    <div class="card-content">
+                                        <a href="#" class="card-title">유향 유속 관측 데이유향 유속 관측 데이터유향 유속 관측 데이터터</a>
+                                        <p class="card-desc">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                        <div class="card-info">
+                                            <dl class="info-item">
+                                                <dt>등록일</dt>
+                                                <dd>2025-05-12</dd>
+                                            </dl>
+                                            <dl class="info-item">
+                                                <dt>수정일</dt>
+                                                <dd>2025-05-12</dd>
+                                            </dl>
+                                            <dl class="info-item">
+                                                <dt>조회</dt>
+                                                <dd>128</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </li>
+                        
+                    </ul>
+                    <!-- pagination -->
+                    <div class="krds-pagination">
+                        <span class="page-navi prev disabled" href="#">이전</span>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">3</a>
+                            <a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
+                            <a class="page-link" href="#">5</a>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <span class="page-link link-dot"></span>
+                            <a class="page-link" href="#">99</a>
                         </div>
-                    </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>                    <!-- //pagination -->
                 </div>
+                <!-- //search-list-container -->
             </div>
+            <!-- // -->
         </div>
-        <!-- //main-sect -->
-
-        <div class="main-sect bg">
-            <div class="inner">
-                <div class="main-tit-wrap">
-                    <h2 class="tit">상세 메뉴</h2>
-                </div>
-                <div class="main-detail-wrap">
-                    <div class="detail-inner">
-                        <div class="detail-tit">융복합 활용 시스템</div>
-                        <div class="detail-cont">
-                            <p>민군경 해양 데이터 관리 시스템의 데이터를 활용하여 공간분석, 시나리오 분석 등 분석 기술 서비스 기능 제공 시스템</p>
-                            <div class="link-wrap">
-                                <a href="#" class="link">자세히 보기 <i class="svg-icon ico-more right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-inner">
-                        <div class="detail-tit">데이터 운영 표준 조회</div>
-                        <div class="detail-cont">
-                            <p>민군경 데이터 관리 플랫폼에서 사용되는 데이터 표준 관리 지침을 제공합니다. <br>데이터 표준 관리의 상세 항목을 조회할 수 있습니다.</p>
-                            <div class="link-wrap">
-                                <a href="#" class="link">자세히 보기 <i class="svg-icon ico-more right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+        <!-- //page-content -->
     </main>
-    <!-- //main -->
+    <!-- //contents -->
 
     <!-- footer -->
     <footer id="krds-footer">
@@ -353,7 +472,7 @@
             </div>
         </div>
     </footer>    <!-- //footer -->
-     
+
     <!-- 통합검색 상세 조건 -->
     <div class="modal-wrap">
         <!-- 모달 : 통합 검색 -->
@@ -767,41 +886,7 @@
     
         <!-- //modal 글자 / 화면 설정 -->
       </div>    <!-- //통합검색 상세 조건 -->
-
-    <script>
-        const eleBanSwiper = new Swiper(".main-data-banner .swiper", {
-          slidesPerView: 1,
-          spaceBetween: 16,
-          speed: 400,
-          loop: true,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-          navigation: {
-            nextEl: ".main-data-banner .swiper-button-next",
-            prevEl: ".main-data-banner .swiper-button-prev",
-          },
-          pagination: {
-            el: ".main-data-banner .swiper-pagination",
-            type: "fraction",
-          },
-        });
-        const $eleBanSwiperPlay = document.querySelector(".main-data-banner .swiper-button-play");
-        const $eleBanSwiperStop = document.querySelector(".main-data-banner .swiper-button-stop");
-        $eleBanSwiperPlay.style.display = "none";
-        $eleBanSwiperPlay.addEventListener("click", () => {
-          eleBanSwiper.autoplay.start();
-          $eleBanSwiperStop.style.display = "";
-          $eleBanSwiperPlay.style.display = "none";
-        });
-        $eleBanSwiperStop.addEventListener("click", () => {
-          eleBanSwiper.autoplay.stop();
-          $eleBanSwiperStop.style.display = "none";
-          $eleBanSwiperPlay.style.display = "";
-        });
-    </script>
+     
 </body>
 
 </html>

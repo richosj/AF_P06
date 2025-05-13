@@ -14,127 +14,107 @@
     {{> header}}
     <!-- //header -->
 
-    <div class="inner">
-        <!-- breadcrumb -->
-        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="home"><a href="#" class="txt">홈</a></li>
-                <li><a href="#" class="txt">데이터</a></li>
-            </ol>
-        </nav>
-        <!-- breadcrumb -->
-    </div>
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
 
     <main id="contents">
         <div class="page-header">
             <h2 class="page-header-title">데이터</h2>
         </div>
+        <!-- //page-header -->
         
-        <!-- 검색 영역 -->
-        <div class="search-top-box">
-            <div class="sch-form-wrap">
-                <div class="sch-input">
-                    <input type="text" class="krds-input" placeholder="검색어를 입력해주세요" title="검색어 입력">
-                    <button type="button" class="krds-btn medium icon ico-search">
-                        <span class="sr-only">검색</span>
-                        <i class="svg-icon ico-sch"></i>
-                    </button>
-                </div>
-                <button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button>
-            </div>
-            <div class="sch-filter-box">
-                <!-- 필터 내용 추가 영역 -->
-            </div>
-        </div>
+        {{> search-top-box }}
         <!-- //search-top-box -->
 
         <div class="page-content">
-            <!-- 사이드바 영역 -->
             {{> aside}}
-
-            <!-- 메인 콘텐츠 영역 -->
+            
             <div class="page-content-body">
-                <div class="page-content-body-content">
-                    <!-- 검색 결과 상단 영역 -->
-                    <div class="search-list-top">
-                        <div class="search-list-result">
-                            검색결과 <b class="total">249</b>건
-                        </div>
-                        <div class="search-list-sort">
-                            <div class="search-legend-group">
-                                <button type="button" class="item krds-badge bg-light-danger">기밀</button>
-                                <button type="button" class="item krds-badge bg-light-warning">내부 전용</button>
-                                <button type="button" class="item krds-badge bg-light-success">일반</button>
-                            </div>
-                            <div class="sort-type-group">
-                                <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
-                                <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
-                            </div>
-                        </div>
+                <!-- 검색 결과 상단 영역 -->
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
                     </div>
-                    <!-- //search-list-top -->
-
-                    <!-- 테이블 데이터 영역 -->
-                    <div class="table table-list">
-                        <table>
-                            <caption class="sr-only">데이터 목록 테이블</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">순번</th>
-                                    <th scope="col">데이터명</th>
-                                    <th scope="col">관리기관</th>
-                                    <th scope="col">카테고리</th>
-                                    <th scope="col">자료유형</th>
-                                    <th scope="col">등록일</th>
-                                    <th scope="col">수정일</th>
-                                    <th scope="col">보안등급</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="success">
-                                    <td>1</td>
-                                    <td>데이터명</td>
-                                    <td>관리기관</td>
-                                    <td>카테고리</td>
-                                    <td>자료유형</td>
-                                    <td>등록일</td>
-                                    <td>수정일</td>
-                                    <td><span class="krds-badge bg-light-success">일반</span></td>
-                                </tr>
-                                <tr class="danger">
-                                    <td>2</td>
-                                    <td>데이터명</td>
-                                    <td>관리기관</td>
-                                    <td>카테고리</td>
-                                    <td>자료유형</td>
-                                    <td>등록일</td>
-                                    <td>수정일</td>
-                                    <td><span class="krds-badge bg-light-danger">기밀</span></td>
-                                </tr>
-                                <tr class="warning">
-                                    <td>3</td>
-                                    <td>데이터명</td>
-                                    <td>관리기관</td>
-                                    <td>카테고리</td>
-                                    <td>자료유형</td>
-                                    <td>등록일</td>
-                                    <td>수정일</td>
-                                    <td><span class="krds-badge bg-light-warning">내부</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="search-list-sort">
+                        <div class="search-legend-group">
+                            <button type="button" class="item krds-badge bg-light-danger">기밀</button>
+                            <button type="button" class="item krds-badge bg-light-warning">내부 전용</button>
+                            <button type="button" class="item krds-badge bg-light-success">일반</button>
+                        </div>
+                        <div class="sort-type-group">
+                            <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
+                            <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
+                        </div>
                     </div>
                 </div>
-                <!-- 페이지네이션 영역 -->
-                {{> pagination}}
-                <!-- //pagination -->
+                <!-- //search-list-top -->
+
+                <!-- 테이블 데이터 영역 -->
+                <div class="table table-list">
+                    <table>
+                        <caption class="sr-only">데이터 목록 테이블</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">순번</th>
+                                <th scope="col">데이터명</th>
+                                <th scope="col">관리기관</th>
+                                <th scope="col">카테고리</th>
+                                <th scope="col">자료유형</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">수정일</th>
+                                <th scope="col">보안등급</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>1</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-success">일반</span></td>
+                            </tr>
+                            <tr class="danger">
+                                <td>2</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-danger">기밀</span></td>
+                            </tr>
+                            <tr class="warning">
+                                <td>3</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-warning">내부</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //table table-list -->
             </div>
+            <!-- //page-content-body -->
         </div>
+        <!-- //page-content -->
     </main>
     
     <!-- footer -->
     {{> footer}}
     <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
     <script type="module" src="/js/main.js"></script>
 </body>
 

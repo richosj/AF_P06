@@ -87,3 +87,70 @@
         }
     }
 }
+
+.card{
+    &-list{
+        &.w-full{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            .card{
+                display: flex;
+                gap: 0 4rem;
+                .card-body{
+                    flex: 1;
+                    overflow: hidden;
+                }
+                .card-footer{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .card-info{
+                        gap:0;
+                        .info-item{
+                            &:not(:first-child){
+                                padding-left: 2rem;
+                                margin-left: 2rem;
+                                position: relative;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 1px;
+                                    height: 1.2rem;
+                                    background-color: #ccd2db;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-thumbnail{
+        border: 1px solid #ccd2db;
+        border-radius: 1.2rem;
+        width: 12rem;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        flex-shrink: 0;
+        &-icon{
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        &-caption{
+            background-color: #e5e8ec;
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 1.7rem;
+            color: #001d49;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+}

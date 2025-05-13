@@ -19,9 +19,6 @@ export default defineConfig(({ mode }) => {
     ? `/${projectName}/`
     : '/';
 
-
-
-
   const pagesPath = path.resolve(__dirname, 'src/pages')
 
   // ✅ 이게 먼저 있어야 함
