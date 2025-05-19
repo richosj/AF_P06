@@ -2422,7 +2422,57 @@ function requireKo() {
   return ko$1.exports;
 }
 var koExports = requireKo();
-flatpickr("#date", {
-  locale: koExports.Korean,
-  dateFormat: "Y-m-d"
+document.querySelectorAll(".date-range").forEach((wrapper) => {
+  const startInput = wrapper.querySelector(".start");
+  const endInput = wrapper.querySelector(".end");
+  const startPicker = flatpickr(startInput, {
+    locale: koExports.Korean,
+    dateFormat: "Y-m-d",
+    onChange: function(selectedDates) {
+      if (selectedDates[0]) {
+        endPicker.set("minDate", selectedDates[0]);
+      }
+    }
+  });
+  const endPicker = flatpickr(endInput, {
+    locale: koExports.Korean,
+    dateFormat: "Y-m-d",
+    onChange: function(selectedDates) {
+      if (selectedDates[0]) {
+        startPicker.set("maxDate", selectedDates[0]);
+      }
+    }
+  });
+});
+document.querySelectorAll(".datepicker").forEach((input) => {
+  flatpickr(input, {
+    locale: koExports.Korean,
+    dateFormat: "Y-m-d"
+  });
+});
+function initSortToggleComponent(containerSelector = ".sort-type-group") {
+  const containers = document.querySelectorAll(containerSelector);
+  containers.forEach((container) => {
+    const buttons = container.querySelectorAll(".sort-type-group-item");
+    const callbackName = container.dataset.callback;
+    const callbackFn = window[callbackName];
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.getAttribute("aria-pressed") === "true") return;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+        btn.setAttribute("aria-pressed", "true");
+        const toggleType = btn.getAttribute("data-toggle-type");
+        const listContainer = document.querySelector(".search-list-container");
+        if (listContainer) {
+          listContainer.setAttribute("data-toggle-type", toggleType);
+        }
+        if (typeof callbackFn === "function") {
+          callbackFn(toggleType);
+        }
+      });
+    });
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  initSortToggleComponent();
 });

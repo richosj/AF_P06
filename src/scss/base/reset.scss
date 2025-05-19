@@ -71,3 +71,13 @@ body {
   padding-right: 0;
   width: var(--krds-contents-wrap-size);
 }
+
+.text-bold{
+  font-weight: 700;
+}
+
+@for $i from 1 through 100{
+  .w-#{$i}{
+    width: #{$i}px;
+  }
+}
